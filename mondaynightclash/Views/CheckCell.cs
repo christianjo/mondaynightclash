@@ -7,7 +7,7 @@ namespace mondaynightclash
 	{
 		public Label CellText { get; set; }
 		public Image ImageDetail { get; set; }
-        //test git
+        //test macs
 		public CheckCell()
 		{
 			Height = 60;
