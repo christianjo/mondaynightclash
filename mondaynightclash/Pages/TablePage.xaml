@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="mondaynightclash.TablePage">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Spacing="0" Padding="0">
+				<StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="Silver">
+					<Label FontSize="18" Text="# " HorizontalOptions="Start" />
+					<Label FontSize="18" Text="Lag" HorizontalOptions="Start" WidthRequest="100" />
+					<Label FontSize="18" Text="Mål" HorizontalOptions="EndAndExpand" WidthRequest="100" />
+					<Label FontSize="18" Text="Poeng" HorizontalOptions="EndAndExpand" WidthRequest="100" />
+				</StackLayout>
+				<StackLayout HeightRequest="176">
+					<ListView ItemsSource="{Binding Teams}">
+						<ListView.ItemTemplate>
+							<DataTemplate>
+								<ViewCell>
+									<StackLayout Orientation="Horizontal" Spacing="4" Padding="5">
+										<Label Text="{Binding Name}"/>
+										<Label Text="{Binding Goals}" Margin="100,0,0,0" />
+										<Label Text="{Binding Points}" Margin="100,0,0,0" />
+									</StackLayout>
+								</ViewCell>
+							</DataTemplate>
+						</ListView.ItemTemplate>
+					</ListView>
+				</StackLayout>
+				<BoxView HeightRequest="40" VerticalOptions="End" HorizontalOptions="FillAndExpand" BackgroundColor="White" />
+				<Label Text="Neste kamp" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+				<StackLayout Orientation="Horizontal" HeightRequest="50" Padding="0" Margin="10">
+					<BoxView BackgroundColor="White" WidthRequest="40" HeightRequest="40" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+					<StackLayout Spacing="0" Orientation="Vertical" HorizontalOptions="Start">
+						<BoxView BackgroundColor="{Binding Home.Color}" WidthRequest="40" HeightRequest="40" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+						<Label FontSize="18" TextColor="Black" Text="{Binding Home.Name}" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+					</StackLayout>
+					<StackLayout Spacing="0" BackgroundColor="White" Orientation="Vertical" HorizontalOptions="EndAndExpand">
+						<Label FontSize="24" TextColor="Black" Text="-" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+					</StackLayout>
+					<StackLayout Spacing="0" BackgroundColor="White" Orientation="Vertical" HorizontalOptions="EndAndExpand">
+						<BoxView BackgroundColor="{Binding Away.Color}" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="Center" />
+						<Label FontSize="18" TextColor="Black" Text="{Binding Away.Name}" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+					</StackLayout>
+					<BoxView BackgroundColor="White" WidthRequest="40" HeightRequest="40" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+				</StackLayout>
+				<StackLayout Spacing="10" Padding="40" BackgroundColor="White" Orientation="Vertical" HorizontalOptions="Center">
+					<Label FontSize="18" TextColor="Black" Text="Start Kamp" VerticalOptions="Center" />
+					<Button BorderRadius="30" HeightRequest="60" WidthRequest="60" BackgroundColor="Teal" HorizontalOptions="Center" VerticalOptions="Start" Command="{Binding StartMatchCommand}" />
+				</StackLayout>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
