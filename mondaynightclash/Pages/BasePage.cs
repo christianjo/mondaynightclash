@@ -17,7 +17,7 @@ namespace mondaynightclash
 				if (basePageModel.IsModalAndHasPreviousNavigationStack())
 				{
 					//Todo: Endre dette.
-					if (ToolbarItems.Count < 2)
+					if (ToolbarItems.Count < 1)
 					{
 						var closeModal = new ToolbarItem("Close Modal", "", () =>
 						{

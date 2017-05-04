@@ -53,6 +53,8 @@
     <Compile Include="Helpers\Countdown.cs" />
     <Compile Include="PageModels\MatchPageModel.cs" />
     <Compile Include="Pages\MatchPage.cs" />
+    <Compile Include="Pages\SelectAssistAndGoalPage.cs" />
+    <Compile Include="PageModels\SelectAssistAndGoalPageModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FreshIOC">

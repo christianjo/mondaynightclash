@@ -28,6 +28,8 @@ namespace mondaynightclash
 			Test = "te";
 		}
 
+		//Todo: Burde ikke få lov til å fjerne denne modalen uten at tiden er gått ut eller man avslutter kampen på en måte med advarsel.
+
 		public Command StartTimer
 		{
 			get
@@ -59,7 +61,7 @@ namespace mondaynightclash
 			{
 				return new Command<string>((para) =>
 			  {
-				  CoreMethods.PushPageModel<PlayerPageModel>();
+				  CoreMethods.PushPageModel<SelectAssistAndGoalPageModel>(true,true);
 
 			  });
 			}

@@ -7,7 +7,7 @@ namespace mondaynightclash
 {
 
 
-	public class TeamsListPage : BasePage
+	public class TeamsListPage : FreshMvvm.FreshBaseContentPage
 	{
 		public TeamsListPage()
 		{

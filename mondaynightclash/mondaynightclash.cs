@@ -40,14 +40,14 @@ namespace mondaynightclash
 			return basicNavContainer;
 		}
 
-		public FreshTabbedNavigationContainer LoadTabbedNav()
-		{
-			//Todo: Dette instansiereres opp for tidlig
-			var tabbedNavigation = new FreshTabbedNavigationContainer();
-			tabbedNavigation.AddTab<TablePageModel>("Tabell", null, null);
-			tabbedNavigation.AddTab<TeamsListPageModel>("Teams", null, null);
-			return tabbedNavigation;
-		}
+		//public FreshTabbedNavigationContainer LoadTabbedNav()
+		//{
+		//	//Todo: Dette instansiereres opp for tidlig
+		//	var tabbedNavigation = new FreshTabbedNavigationContainer();
+		//	tabbedNavigation.AddTab<TablePageModel>("Tabell", null, null);
+		//	tabbedNavigation.AddTab<TeamsListPageModel>("Teams", null, null);
+		//	return tabbedNavigation;
+		//}
 
 		protected override void OnStart()
 		{
